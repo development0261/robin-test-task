@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 #### My system versions :
-Dependei Header  | Version
+Dependency  | Version
 ------------- | -------------
 Node  | v15.12.0
 NPM  | 7.6.3 
