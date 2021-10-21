@@ -1,28 +1,53 @@
 <template>
-  <div class="main-contant-box-inner">
-    <div class="contant-box">
-      <ProfileDetails></ProfileDetails>
+  <div class="dashboard-top-section">
+    <div class="dts-row">
+      <div class="dts-box-outer">
+        <div class="dts-box">
+          <span>154</span>
+          <h6>Campaigns</h6>
+        </div>
+      </div>
+      <div class="dts-box-outer">
+        <div class="dts-box">
+          <span>9975</span>
+          <h6>Members</h6>
+        </div>
+      </div>
+      <div class="dts-box-outer">
+        <div class="dts-box">
+          <span>712</span>
+          <h6>Offers</h6>
+        </div>
+      </div>
+      <div class="dts-box-outer">
+        <div class="dts-box">
+          <span>530</span>
+          <h6>Products</h6>
+        </div>
+      </div>
     </div>
-    <div class="contant-box">
-      <MostLikelyToBuy></MostLikelyToBuy>
-    </div>
-    <div class="contant-box">
-      <Campaigns></Campaigns>
-    </div>
-    <div class="contant-box">
-      <Purchases></Purchases>
+  </div>
+  <div class="dashboard-bottom-section">
+    <div class="dbs-row">
+      <div class="dbs-box-outer">
+        <ArticlesCategory></ArticlesCategory>
+      </div>
+      <div class="dbs-box-outer">
+        <ArticlesTranding></ArticlesTranding>
+      </div>
+      <div class="dbs-box-outer">
+        <ArticlesAudience></ArticlesAudience>
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts">
 import {defineComponent} from 'vue'
-import ProfileDetails from '@/components/CustomComponents/Dashboard/ProfileDetails.vue'
-import MostLikelyToBuy from '@/components/CustomComponents/Dashboard/MostLikelyToBuy.vue'
-import Campaigns from '@/components/CustomComponents/Dashboard/Campaigns.vue'
-import Purchases from '@/components/CustomComponents/Dashboard/Purchases.vue'
-
+import ArticlesCategory from '@/components/CustomComponents/Dashboard/ArticlesCategory.vue'
+import ArticlesTranding from '@/components/CustomComponents/Dashboard/ArticlesTranding.vue'
+import ArticlesAudience from '@/components/CustomComponents/Dashboard/ArticlesAudience.vue'
 export default defineComponent({
   name: 'Dashboard',
-  components: {ProfileDetails, MostLikelyToBuy, Campaigns, Purchases},
+  components: {ArticlesCategory, ArticlesTranding, ArticlesAudience},
 })
 </script>

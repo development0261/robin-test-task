@@ -5,7 +5,7 @@
     <div class="main-contant">
       <Header></Header>
       <div class="main-contant-box">
-        <Dashboard />
+        <router-view />
       </div>
     </div>
   </div>
@@ -23,5 +23,4 @@ export default defineComponent({
 </script>
 
 <style>
-
 </style>
