@@ -76,7 +76,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="active-page">
                 <svg
                   width="24"
                   height="21"
@@ -238,7 +238,7 @@
       <div class="sidebar-wrap-bottom">
         <ul>
           <li>
-            <a href="#" class="active-page user-profile-link-outer">
+            <a href="#" class="user-profile-link-outer">
               <div class="user-profile-link">
                 <div class="user-image">
                   <img src="../../image/profile-image.png" alt="" />

@@ -1,9 +1,12 @@
 <template>
-  <h5>Profile</h5>
+  <h5>Article recommendations</h5>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Profile</li>
+      <li class="breadcrumb-item"><a href="#">Cart</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        FörpackningsmaterialPacktejp - Häftapparater & LimpKartonger - Transportlådor
+      </li>
     </ol>
   </nav>
 </template>
