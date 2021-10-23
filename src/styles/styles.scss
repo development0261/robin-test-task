@@ -762,6 +762,9 @@ ul {
 		font-size: 22px;
 		font-weight: bold;
 		margin: 0;
+		@media only screen and (max-width: 767px) {
+			font-size: 18px;
+		}
 	}
 
 	.breadcrumb {
@@ -1335,12 +1338,22 @@ ul {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-
+			@media only screen and (max-width: 1199px) {
+				flex-wrap: wrap;
+			}
 			.prst-tags {
+				@media only screen and (max-width: 1199px) {
+					width: 100%;
+    				margin-bottom: 10px;
+				}
 				ul {
 					display: flex;
 					align-items: center;
-
+					flex-wrap: wrap;
+					li {
+						margin-top: 2px;
+						margin-bottom: 2px;
+					}
 					p {
 						margin: 0;
 						font-weight: 600;
@@ -1416,9 +1429,11 @@ ul {
 
 							h6 {
 								margin: 0;
+								word-break: break-all;
 								font-weight: 600;
 								color: #3F3F40;
 								font-size: 15px;
+								padding-right: 15px;
 							}
 
 							button {
@@ -1426,6 +1441,7 @@ ul {
 								display: flex;
 								border-radius: 3px;
 								font-weight: 500;
+								white-space: nowrap;
 								font-size: 13px;
 								border: none;
 								align-items: center;
@@ -1462,6 +1478,9 @@ ul {
 						}
 						.sold-articles-details {
 							padding: 0 30px 10px;
+							@media only screen and (max-width: 991px) {
+								padding: 0 0 10px;
+							}
 							.table {
 								background-color: #fff;
 								border-collapse: inherit;
@@ -1480,6 +1499,7 @@ ul {
 										padding: 3px 10px;
 										font-weight: normal;
 										vertical-align: middle;
+										font-weight: 500 !important;
 										.add-article-btn {
 											border: 1px solid #5E66FA;
 											padding: 8px;
@@ -1566,6 +1586,138 @@ ul {
 /****/
 .prs-bottom {
     background-color: #F6F6F7;
-	margin: 20px;
-}
+	padding: 20px;
+	.recommended-section {
+		.recommended-section-row {
+			.recommended-section-table {
+				position: relative;
+				> .table-responsive-lg {
+					table {
+						border-collapse: inherit;
+						background: #F6F7F7;
+						padding-right: 120px;
+					}
+				}
+				> button {
+					background: #FFFFFF;
+					display: flex;
+					border-radius: 3px;
+					font-weight: 500;
+					font-size: 13px;
+					border: none;
+					align-items: center;
+					color: #3F3F40;
+					padding: 5px 10px;
+					position: absolute;
+					right: 20px;
+					top: 12px;
+					img {
+						transform: rotate(-90deg);
+						margin-left: 10px;
+						filter: brightness(0);
+					}
+				}
+				> button.collapsed {
+					color: #5E66FA;
 
+					.hide-articles {
+						display: none;
+					}
+
+					.show-articles {
+						display: inline-block;
+					}
+
+					img {
+						transform: none;
+						filter: none;
+					}
+				}
+				.show-articles {
+					display: none;
+				}
+				table {
+					th {
+						color: #AAABAD;
+						font-weight: 500;
+						font-size: 11px;
+						line-height: 14px;
+						white-space: pre;
+						border-bottom: 0;
+						height: 50px;
+						vertical-align: middle;
+					}
+					td {
+						border: none;
+						color: #3F3F40;
+						font-weight: 500;
+						vertical-align: middle;
+						font-size: 15px;
+						padding: 7px 10px;
+					}
+					.article-connection {
+						color: #0BC984;
+						font-weight: 600;
+						font-size: 28px;
+					}
+				}
+				.recommended-section-details {
+					padding: 0 10px;
+					@media only screen and (max-width: 991px) {
+						padding: 0 0;
+					}
+					h6 {
+						font-weight: 600;
+						font-size: 15px;
+						color: #3F3F40;
+						margin-top: 5px;
+						margin-bottom: 11px;
+						white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+					}
+					.table {
+						background-color: #fff;
+						border-collapse: inherit;
+						th:last-child {
+							opacity: 0;
+							visibility: hidden;
+						}
+						tr {
+							box-shadow: 0px 1px 0px 0 #e8e9eb;
+						}
+						tr {
+							box-shadow: 0px 1px 0px 0 #e8e9eb;
+						}
+						.high-article {
+							color: #0BC984;
+							margin: 0;
+							font-weight: 600;
+							font-size: 15px;
+						}
+						th {
+							height: auto;
+						}
+						a.add-article-btn {
+							border: 1px solid #5E66FA;
+							padding: 8px;
+							border-radius: 3px;
+							text-decoration: none !important;
+							display: flex;
+							align-items: center;
+							white-space: nowrap;
+							color: #5E66FA;
+							margin-left: auto;
+							width: min-content;
+							justify-content: center;
+							img {
+								margin-right: 8px;
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

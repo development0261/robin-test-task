@@ -61,7 +61,7 @@
                 </button>
               </div>
               <div class="sold-articles-details collapse" id="förpackningsmaterial">
-                <b-table :items="items" :fields="fields" responsive="sm">
+                <b-table :items="items" :fields="fields" responsive="lg">
                   <template #cell(show_details)="">
                     <h1>tets</h1>
                   </template>
@@ -99,7 +99,7 @@
                 </button>
               </div>
               <div class="sold-articles-details collapse" id="packtejp">
-                <b-table :items="items" :fields="fields" responsive="sm">
+                <b-table :items="items" :fields="fields" responsive="lg">
                   <template #cell(show_details)="">
                     <h1>tets</h1>
                   </template>
@@ -137,7 +137,7 @@
                 </button>
               </div>
               <div class="sold-articles-details collapse" id="kartonger">
-                <b-table :items="items" :fields="fields" responsive="sm">
+                <b-table :items="items" :fields="fields" responsive="lg">
                   <template #cell(show_details)="">
                     <h1>tets</h1>
                   </template>
@@ -165,7 +165,194 @@
     <div class="prs-bottom">
       <div class="contant-box-main">
         <div class="contant-header">
-          <h6><img src="./../image/doc.png" alt="" />Recommended</h6>
+          <h6><img src="./../image/recommended-icon.png" alt="" />Recommended</h6>
+        </div>
+        <div class="recommended-section">
+          <div class="recommended-section-row">
+            <div class="recommended-section-table">
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#recommended1"
+                aria-expanded="false"
+                class="collapsed"
+                aria-controls="recommended1"
+              >
+                <span class="hide-articles">Hide</span>
+                <span class="show-articles">Show</span>
+                <img src="../image/right-sky.png" alt="" />
+              </button>
+              <div class="table-responsive-lg">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Article number</th>
+                      <th scope="col">Article Name</th>
+                      <th scope="col">Сategory</th>
+                      <th scope="col">Article connection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                      <td rowspan="2" class="article-connection">50%</td>
+                    </tr>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="recommended-section-details collapse" id="recommended1">
+                <h6>Recommended associated articles</h6>
+                <b-table :items="items1" :fields="fields1" responsive="lg">
+                  <template #cell(show_details)="">
+                    <h1>tets</h1>
+                  </template>
+                  <template #cell(show_details1)="">
+                    <a href="#" class="add-article-btn"
+                      ><img src="../image/plus-sky.png" /> Add article</a
+                    >
+                  </template>
+                  <template #cell(probability_to_sell)="">
+                    <h6 class="high-article">High</h6>
+                  </template>
+                  <template #cell(medium)="">
+                    <h6 class="medium-article">Medium</h6>
+                  </template>
+                  <template #cell(low)="">
+                    <h6 class="low-article">Low</h6>
+                  </template>
+                </b-table>
+              </div>
+            </div>
+            <div class="recommended-section-table">
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#recommended2"
+                aria-expanded="false"
+                class="collapsed"
+                aria-controls="recommended2"
+              >
+                <span class="hide-articles">Hide</span>
+                <span class="show-articles">Show</span>
+                <img src="../image/right-sky.png" alt="" />
+              </button>
+              <div class="table-responsive-lg">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Article number</th>
+                      <th scope="col">Article Name</th>
+                      <th scope="col">Сategory</th>
+                      <th scope="col">Article connection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                      <td rowspan="2" class="article-connection">50%</td>
+                    </tr>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="recommended-section-details collapse" id="recommended2">
+                <h6>Recommended associated articles</h6>
+                <b-table :items="items1" :fields="fields1" responsive="lg">
+                  <template #cell(show_details)="">
+                    <h1>tets</h1>
+                  </template>
+                  <template #cell(show_details1)="">
+                    <a href="#" class="add-article-btn"
+                      ><img src="../image/plus-sky.png" /> Add article</a
+                    >
+                  </template>
+                  <template #cell(probability_to_sell)="">
+                    <h6 class="high-article">High</h6>
+                  </template>
+                  <template #cell(medium)="">
+                    <h6 class="medium-article">Medium</h6>
+                  </template>
+                  <template #cell(low)="">
+                    <h6 class="low-article">Low</h6>
+                  </template>
+                </b-table>
+              </div>
+            </div>
+            <div class="recommended-section-table">
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#recommended3"
+                aria-expanded="false"
+                class="collapsed"
+                aria-controls="recommended3"
+              >
+                <span class="hide-articles">Hide</span>
+                <span class="show-articles">Show</span>
+                <img src="../image/right-sky.png" alt="" />
+              </button>
+              <div class="table-responsive-lg">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Article number</th>
+                      <th scope="col">Article Name</th>
+                      <th scope="col">Сategory</th>
+                      <th scope="col">Article connection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                      <td rowspan="2" class="article-connection">50%</td>
+                    </tr>
+                    <tr>
+                      <td>00139</td>
+                      <td>Tejp, påsförslutning Röd 66 m x 12 mm, 6 st</td>
+                      <td>Förpackningsmaterial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="recommended-section-details collapse" id="recommended3">
+                <h6>Recommended associated articles</h6>
+                <b-table :items="items1" :fields="fields1" responsive="lg">
+                  <template #cell(show_details)="">
+                    <h1>tets</h1>
+                  </template>
+                  <template #cell(show_details1)="">
+                    <a href="#" class="add-article-btn"
+                      ><img src="../image/plus-sky.png" /> Add article</a
+                    >
+                  </template>
+                  <template #cell(probability_to_sell)="">
+                    <h6 class="high-article">High</h6>
+                  </template>
+                  <template #cell(medium)="">
+                    <h6 class="medium-article">Medium</h6>
+                  </template>
+                  <template #cell(low)="">
+                    <h6 class="low-article">Low</h6>
+                  </template>
+                </b-table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -182,23 +369,44 @@ export default defineComponent({
       fields: ['article_number', 'article_name', 'probability_to_sell', 'show_details1'],
       items: [
         {
-          age: 40,
           article_number: '00139',
           article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
           _probability_to_sell: true,
           _show_details1: true,
         },
         {
-          age: 21,
           article_number: '00139',
           article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
           _probability_to_sell: true,
           _show_details1: true,
         },
         {
-          age: 89,
           article_number: '00139',
           article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
+          _probability_to_sell: true,
+          _show_details1: true,
+        },
+      ],
+      fields1: ['ID', 'article_name', 'category', 'probability_to_sell', 'show_details1'],
+      items1: [
+        {
+          ID: '00139',
+          article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
+          category: 'Avfallshantering',
+          _probability_to_sell: true,
+          _show_details1: true,
+        },
+        {
+          ID: '00139',
+          article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
+          category: 'Food Packaging',
+          _probability_to_sell: true,
+          _show_details1: true,
+        },
+        {
+          ID: '00139',
+          article_name: 'Tejp, påsförslutning Röd 66 m x 12 mm, 6 st',
+          category: 'Skyddsutrustning & Arbetskläde',
           _probability_to_sell: true,
           _show_details1: true,
         },
