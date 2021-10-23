@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <div class="header-inner">
-            <a href="#" class="back-page"><img src="../../image/back-page.png" alt="" /></a>
+            <!-- <a href="#" class="back-page"><img src="../../image/back-page.png" alt="" /></a> -->
             <div class="backpage-name">
               <HeaderDetail></HeaderDetail>
             </div>

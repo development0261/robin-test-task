@@ -2,7 +2,7 @@
   <div class="top-three-box">
     <div class="ttb-inner">
       <div class="ttb-header">
-        <h6><img src="../../../image/star-icon.png" alt="" />Top 3 articles in Audience</h6>
+        <h6><img src="../../../image/star-icon.png" alt="" />Top 3 articles Tranding</h6>
       </div>
       <div class="most-sold-box">
         <div class="most-sold-title">
