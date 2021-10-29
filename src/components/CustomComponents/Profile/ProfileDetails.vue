@@ -7,8 +7,8 @@
         </div>
         <div class="pd-text">
           <span>Email</span>
-          <h3>witre@email.com</h3>
-          <p>Admin</p>
+          <h3>{{userDetail.email}}</h3>
+          <p>{{userDetail.role}}</p>
         </div>
       </div>
       <button class="logout-btn"><img src="../../../image/long_right.png" alt="" />Log out</button>
@@ -118,6 +118,10 @@ export default defineComponent({
       password: null,
       new_password: null,
       confirm_password: null,
+      userDetail: {
+        'email': 'witre@email.com',
+        'role': 'Admin',
+      }
     }
   },
   methods: {

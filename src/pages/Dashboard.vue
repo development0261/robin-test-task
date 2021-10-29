@@ -3,25 +3,25 @@
     <div class="dts-row">
       <div class="dts-box-outer">
         <div class="dts-box">
-          <span>154</span>
+          <span>{{counterBoard.campaigns}}</span>
           <h6>Campaigns</h6>
         </div>
       </div>
       <div class="dts-box-outer">
         <div class="dts-box">
-          <span>9975</span>
+          <span>{{counterBoard.members}}</span>
           <h6>Members</h6>
         </div>
       </div>
       <div class="dts-box-outer">
         <div class="dts-box">
-          <span>712</span>
+          <span>{{counterBoard.offers}}</span>
           <h6>Offers</h6>
         </div>
       </div>
       <div class="dts-box-outer">
         <div class="dts-box">
-          <span>530</span>
+          <span>{{counterBoard.products}}</span>
           <h6>Products</h6>
         </div>
       </div>
@@ -49,5 +49,15 @@ import ArticlesAudience from '@/components/CustomComponents/Dashboard/ArticlesAu
 export default defineComponent({
   name: 'Dashboard',
   components: {ArticlesCategory, ArticlesTranding, ArticlesAudience},
+  data() {
+    return {
+      counterBoard: {
+        campaigns: 154,
+        members: 9974,
+        offers: 712,
+        products: 530,
+      }
+    }
+  },
 })
 </script>

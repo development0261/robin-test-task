@@ -12,46 +12,18 @@
           /></a>
         </div>
         <div class="most-sold-bars">
-          <div class="most-sold-bars-wrap">
+          <div class="most-sold-bars-wrap" v-for="(item,index) in trandingArticle.mostSold">
             <div class="msbw-title">
               <div class="msbw-title-top">
-                <p>Engångshadskar för korttidsanvändning</p>
-                <span>99%</span>
+                <p>{{item.name}}</p>
+                <span>{{item.ratio}}%</span>
               </div>
               <div class="msbw-title-bottom">
-                <p>Avfallshantering</p>
+                <p>{{item.title}}</p>
               </div>
             </div>
             <div class="msbw-bar">
               <span style="width: 99%"></span>
-            </div>
-          </div>
-          <div class="most-sold-bars-wrap">
-            <div class="msbw-title">
-              <div class="msbw-title-top">
-                <p>Skopa plast 900 ml</p>
-                <span>68%</span>
-              </div>
-              <div class="msbw-title-bottom">
-                <p>Skyddsutrustning & Arbet</p>
-              </div>
-            </div>
-            <div class="msbw-bar">
-              <span style="width: 68%"></span>
-            </div>
-          </div>
-          <div class="most-sold-bars-wrap">
-            <div class="msbw-title">
-              <div class="msbw-title-top">
-                <p>Basket 26 l color blue</p>
-                <span>67%</span>
-              </div>
-              <div class="msbw-title-bottom">
-                <p>Food Packaging</p>
-              </div>
-            </div>
-            <div class="msbw-bar">
-              <span style="width: 67%"></span>
             </div>
           </div>
         </div>
@@ -65,17 +37,9 @@
         </div>
         <div class="highest-values">
           <ul>
-            <li>
-              <p>Skopa plast 450 ml</p>
-              <span>240</span>
-            </li>
-            <li>
-              <p>Skopa plast 900 ml</p>
-              <span>120</span>
-            </li>
-            <li>
-              <p>Skopa plast 1000 ml</p>
-              <span>60</span>
+            <li v-for="(item,index) in trandingArticle.higestValue">
+              <p>{{item.name}}</p>
+              <span>{{item.ratio}}</span>
             </li>
           </ul>
         </div>
@@ -89,17 +53,11 @@
         </div>
         <div class="highest-values connected-values">
           <ul>
-            <li>
-              <p>Skopa plast 450 ml</p>
-              <h5 class="high-connected">High</h5>
-            </li>
-            <li>
-              <p>Skopa plast 900 ml</p>
-              <h5 class="medium-connected">Medium</h5>
-            </li>
-            <li>
-              <p>Skopa plast 1000 ml</p>
-              <h5 class="low-connected">Low</h5>
+            <li v-for="(item,index) in trandingArticle.connected">
+              <p>{{item.name}}</p>
+              <h5 v-if="item.ratio == 'high'" class="high-connected">High</h5>
+              <h5 v-else-if="item.ratio == 'medium'" class="medium-connected">Medium</h5>
+              <h5 v-else-if="item.ratio == 'low'" class="low-connected">Low</h5>
             </li>
           </ul>
         </div>
@@ -111,6 +69,60 @@
 import {defineComponent, onMounted, ref} from 'vue'
 export default defineComponent({
   name: 'ArticlesCategory',
+  data() {
+    return {
+      trandingArticle: {
+        mostSold: [
+          {
+            name: 'Engångshadskar för korttidsanvändning',
+            ratio: 99,
+            title: 'Avfallshantering',
+          },
+          {
+            name: 'Skopa plast 900 ml',
+            ratio: 68,
+            title: 'Avfallshantering',
+          },
+          {
+            name: 'Basket 26 l color blue',
+            ratio: 67,
+            title: 'Avfallshantering',
+          },
+        ],
+        higestValue: [
+
+          {
+            name: 'Skopa plast 450 ml',
+            ratio: 240,
+          },
+          {
+            name: 'Skopa plast 900 ml',
+            ratio: 120,
+          },
+          {
+            name: 'Skopa plast 1000 ml',
+            ratio: 60,
+          },
+
+        ],
+        connected: [
+
+          {
+            name: 'Skopa plast 450 ml',
+            ratio: 'high',
+          },
+          {
+            name: 'Skopa plast 900 ml',
+            ratio: 'low',
+          },
+          {
+            name: 'Skopa plast 1000 ml',
+            ratio: 'medium',
+          },
+        ]
+      }
+    }
+  },
 })
 </script>
 <style>
